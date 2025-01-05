@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+# 其他可选配置
+spring:
+  application:
+    name: rocketmq-study
+
+rocketmq:
+  name-server: host.docker.internal:9876 # 使用 host.docker.internal
+  # 或者使用 WSL 的 IP
+  # name-server: 172.17.0.1:9876
+  producer:
+    group: rocketmq-demo-producer-group
+  consumer:
+    group: rocketmq-demo-consumer-group
+    topic: rocketmq-demo_common-message_topic
+    tag: general
