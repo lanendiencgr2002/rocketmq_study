@@ -11,11 +11,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.apache.rocketmq.client.apis.producer.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 
 @SpringBootTest
 public class normal_messagesTests {
 
-	@Autowired
+	@Resource
 	private Producer producer;
 
 	@Test
